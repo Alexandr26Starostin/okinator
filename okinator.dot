@@ -1,0 +1,17 @@
+digraph
+{
+	node[fontsize=9]
+
+	node_0x6338bd6ac4a0 [shape=record, label = "{Животное| {left = 0x6338bd6ac6b0 | node = 0x6338bd6ac4a0 | parent = (nil) | right = 0x6338bd6ac6e0}}" style="filled",fillcolor="yellow"]
+
+	node_0x6338bd6ac6b0 [shape=record, label = "{Котик| {left = (nil) | node = 0x6338bd6ac6b0 | parent = 0x6338bd6ac4a0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
+
+	edge[color="red",fontsize=12]
+	node_0x6338bd6ac4a0 -> node_0x6338bd6ac6b0
+
+	node_0x6338bd6ac6e0 [shape=record, label = "{Не котик| {left = (nil) | node = 0x6338bd6ac6e0 | parent = 0x6338bd6ac4a0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
+
+	edge[color="blue",fontsize=12]
+	node_0x6338bd6ac4a0 -> node_0x6338bd6ac6e0
+
+	}
