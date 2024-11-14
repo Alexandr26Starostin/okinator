@@ -11,9 +11,8 @@ static okinator_error_t creat_new_node (node_t** ptr_ptr_node, int line, const c
 
 //----------------------------------------------------------------------------------------------------------------------
 
-node_t* attach_node (const char* str_name, node_t* ptr_left, node_t* ptr_right, node_t* ptr_parent, int line, const char* file)
+node_t* attach_node (char* str_name, node_t* ptr_left, node_t* ptr_right, node_t* ptr_parent, int line, const char* file)
 {
-	assert (str_name);
 	assert (file);
 
 	node_t* ptr_new_node = NULL;
