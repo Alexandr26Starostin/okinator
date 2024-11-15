@@ -28,7 +28,7 @@ okinator_error_t dump_tree (node_t* node, char* str_for_system, size_t* ptr_inde
 	system (str_for_system);
 
 	fprintf (file_html, "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n"
-						"<img src=\"pictures/okinator_%c%c%c%c.svg\" style=\"width: 80\%\">\n", 
+						"<img src=\"pictures/okinator_%c%c%c%c.svg\" style=\"width: 100%%\">\n", 
 						str_for_system[INDEX_NUMBER_OF_PICTURE + 0], str_for_system[INDEX_NUMBER_OF_PICTURE + 1], str_for_system[INDEX_NUMBER_OF_PICTURE + 2], str_for_system[INDEX_NUMBER_OF_PICTURE + 3]);
 
 	*ptr_index += 1;

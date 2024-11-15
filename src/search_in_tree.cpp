@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include <assert.h>
-#include <string.h>
 
 #include "const_in_okinator.h"
 #include "new_node.h"
 #include "search_in_tree.h"
-#include "dump_tree.h"
+
+char name_new_data[SIZE_NAME_NEW_DATA]  = "";
+char name_left_data[SIZE_NAME_NEW_DATA] = "";
 
 static okinator_error_t add_node_in_tree (node_t* node);
+
+//---------------------------------------------------------------------------------------------------------------
 
 okinator_error_t search_in_tree (node_t* node)
 {
@@ -46,10 +49,6 @@ okinator_error_t search_in_tree (node_t* node)
 			printf ("А что это было ?\n");
 
 			add_node_in_tree (node);
-
-			printf ("!!!! %s\n",  node -> data);
-			printf ("!!!! %s\n", (node -> right) -> data);
-			printf ("!!!! %s\n\n", (node -> left) -> data);
 		}
 
 		return NOT_ERROR;
@@ -70,9 +69,6 @@ okinator_error_t search_in_tree (node_t* node)
 static okinator_error_t add_node_in_tree (node_t* node)
 {
 	assert (node);
-
-	char name_new_data[SIZE_NAME_NEW_DATA]  = "";
-	char name_left_data[SIZE_NAME_NEW_DATA] = "";
 
 	node -> right = attach_node (NULL, NULL, NULL, node, __LINE__, __FILE__);
 	node -> left  = attach_node (NULL, NULL, NULL, node, __LINE__, __FILE__);

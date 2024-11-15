@@ -3,10 +3,10 @@
 
 struct node_t 
 {
-	char*  data;
-	node_t*      left;
-	node_t*      right;
-	node_t*      parent;
+	char*   data;
+	node_t* left;
+	node_t* right;
+	node_t* parent;
 };
 
 enum okinator_error_t 

@@ -5,6 +5,7 @@
 #include "delete_tree.h"
 #include "dump_tree.h"
 #include "search_in_tree.h"
+#include "definition_and_comparison.h"
 
 int main ()
 {
@@ -55,11 +56,13 @@ int main ()
 
 	dump_tree (node_1, str_for_system, &index, file_html);
 
-	search_in_tree (node_1);
+	//search_in_tree (node_1);
 
 	dump_tree (node_1, str_for_system, &index, file_html);
 
 	fprintf (file_html, "</pre>\n");
+
+	create_definition_node (node_1, name_data_5);
 	
 	delete_tree (node_1);
 	fclose (file_html);

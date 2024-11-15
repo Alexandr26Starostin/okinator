@@ -2,46 +2,36 @@ digraph
 {
 	node[fontsize=9]
 
-	node_0x60ea626f74a0 [shape=record, label = "{Животное| {left = 0x60ea626f76b0 | node = 0x60ea626f74a0 | parent = (nil) | right = 0x60ea626f76e0}}" style="filled",fillcolor="yellow"]
+	node_0x62b6348b94a0 [shape=record, label = "{Животное| {left = 0x62b6348b96b0 | node = 0x62b6348b94a0 | parent = (nil) | right = 0x62b6348b96e0}}" style="filled",fillcolor="yellow"]
 
-	node_0x60ea626f76b0 [shape=record, label = "{Плавает| {left = 0x60ea626f7710 | node = 0x60ea626f76b0 | parent = 0x60ea626f74a0 | right = 0x60ea626f7740}}" style="filled",fillcolor="#BDEF9E"]
-
-	edge[color="red",fontsize=12]
-	node_0x60ea626f74a0 -> node_0x60ea626f76b0
-
-	node_0x60ea626f7710 [shape=record, label = "{Кит| {left = (nil) | node = 0x60ea626f7710 | parent = 0x60ea626f76b0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
+	node_0x62b6348b96b0 [shape=record, label = "{Плавает| {left = 0x62b6348b9710 | node = 0x62b6348b96b0 | parent = 0x62b6348b94a0 | right = 0x62b6348b9740}}" style="filled",fillcolor="#BDEF9E"]
 
 	edge[color="red",fontsize=12]
-	node_0x60ea626f76b0 -> node_0x60ea626f7710
+	node_0x62b6348b94a0 -> node_0x62b6348b96b0
 
-	node_0x60ea626f7740 [shape=record, label = "{Попугай| {left = (nil) | node = 0x60ea626f7740 | parent = 0x60ea626f76b0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
-
-	edge[color="blue",fontsize=12]
-	node_0x60ea626f76b0 -> node_0x60ea626f7740
-
-	node_0x60ea626f76e0 [shape=record, label = "{Растение| {left = 0x60ea626f7770 | node = 0x60ea626f76e0 | parent = 0x60ea626f74a0 | right = 0x60ea626f77a0}}" style="filled",fillcolor="#BDEF9E"]
-
-	edge[color="blue",fontsize=12]
-	node_0x60ea626f74a0 -> node_0x60ea626f76e0
-
-	node_0x60ea626f7770 [shape=record, label = "{Ромашка| {left = (nil) | node = 0x60ea626f7770 | parent = 0x60ea626f76e0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
+	node_0x62b6348b9710 [shape=record, label = "{Кит| {left = (nil) | node = 0x62b6348b9710 | parent = 0x62b6348b96b0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
 
 	edge[color="red",fontsize=12]
-	node_0x60ea626f76e0 -> node_0x60ea626f7770
+	node_0x62b6348b96b0 -> node_0x62b6348b9710
 
-	node_0x60ea626f77a0 [shape=record, label = "{x| {left = 0x60ea626f8020 | node = 0x60ea626f77a0 | parent = 0x60ea626f76e0 | right = 0x60ea626f7ff0}}" style="filled",fillcolor="#BDEF9E"]
+	node_0x62b6348b9740 [shape=record, label = "{Попугай| {left = (nil) | node = 0x62b6348b9740 | parent = 0x62b6348b96b0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
 
 	edge[color="blue",fontsize=12]
-	node_0x60ea626f76e0 -> node_0x60ea626f77a0
+	node_0x62b6348b96b0 -> node_0x62b6348b9740
 
-	node_0x60ea626f8020 [shape=record, label = "{`��v�| {left = (nil) | node = 0x60ea626f8020 | parent = 0x60ea626f77a0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
+	node_0x62b6348b96e0 [shape=record, label = "{Растение| {left = 0x62b6348b9770 | node = 0x62b6348b96e0 | parent = 0x62b6348b94a0 | right = 0x62b6348b97a0}}" style="filled",fillcolor="#BDEF9E"]
+
+	edge[color="blue",fontsize=12]
+	node_0x62b6348b94a0 -> node_0x62b6348b96e0
+
+	node_0x62b6348b9770 [shape=record, label = "{Ромашка| {left = (nil) | node = 0x62b6348b9770 | parent = 0x62b6348b96e0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
 
 	edge[color="red",fontsize=12]
-	node_0x60ea626f77a0 -> node_0x60ea626f8020
+	node_0x62b6348b96e0 -> node_0x62b6348b9770
 
-	node_0x60ea626f7ff0 [shape=record, label = "{Гвоздь| {left = (nil) | node = 0x60ea626f7ff0 | parent = 0x60ea626f77a0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
+	node_0x62b6348b97a0 [shape=record, label = "{Гвоздь| {left = (nil) | node = 0x62b6348b97a0 | parent = 0x62b6348b96e0 | right = (nil)}}" style="filled",fillcolor="#BDEF9E"]
 
 	edge[color="blue",fontsize=12]
-	node_0x60ea626f77a0 -> node_0x60ea626f7ff0
+	node_0x62b6348b96e0 -> node_0x62b6348b97a0
 
 	}
