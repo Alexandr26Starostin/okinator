@@ -56,11 +56,9 @@ int main ()
 
 	dump_tree (node_1, str_for_system, &index, file_html);
 
-	//search_in_tree (node_1);
+	search_in_tree (node_1);
 
 	dump_tree (node_1, str_for_system, &index, file_html);
-
-	fprintf (file_html, "</pre>\n");
 
 	if (create_definition_node (node_1, name_data_5))
 	{
@@ -79,6 +77,8 @@ int main ()
 		delete_tree (node_1);
 		fclose (file_html);
 	}
+
+	fprintf (file_html, "</pre>\n");
 	
 	delete_tree (node_1);
 	fclose (file_html);

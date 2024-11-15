@@ -20,11 +20,11 @@ okinator_error_t search_in_tree (node_t* node)
 	printf ("Y/n\n");
 
 	char answer = '\0';
-	scanf ("%c%*c", &answer);
+	scanf ("%c", &answer);
 
 	printf ("\n");
 
-	if (answer == 'Y' || answer == 'y')
+	if ((answer == 'Y' || answer == 'y') && (getchar () == '\n'))
 	{
 		if (node -> left != NULL)
 		{
@@ -34,11 +34,9 @@ okinator_error_t search_in_tree (node_t* node)
 		{
 			printf ("Твой загаданный объект: %s\n", node -> data);
 		}
-
-		return NOT_ERROR;
 	}
 
-	else if (answer == 'N' || answer == 'n')
+	else if ((answer == 'N' || answer == 'n') && (getchar () == '\n'))
 	{
 		if (node -> right != NULL)
 		{
@@ -50,17 +48,15 @@ okinator_error_t search_in_tree (node_t* node)
 
 			add_node_in_tree (node);
 		}
-
-		return NOT_ERROR;
 	}
 
 	else 
 	{
+		while (getchar () != '\n') {}
+		
 		printf ("Я не смог понять твой ответ. Повтори, пожалуйста)))\n");
 
 		search_in_tree (node);
-
-		return NOT_ERROR;
 	}
 
 	return NOT_ERROR;
@@ -73,7 +69,8 @@ static okinator_error_t add_node_in_tree (node_t* node)
 	node -> right = attach_node (NULL, NULL, NULL, node, __LINE__, __FILE__);
 	node -> left  = attach_node (NULL, NULL, NULL, node, __LINE__, __FILE__);
 
-	scanf ("%s", name_left_data);
+	scanf ("%[^'\n']", name_left_data);
+	getchar ();
 	(node -> left) -> data = name_left_data;
 
 	printf ("\nЧем %s отличается от %s ?\n", (node -> left) -> data, node -> data);
@@ -81,7 +78,8 @@ static okinator_error_t add_node_in_tree (node_t* node)
 
 	(node -> right) -> data = node -> data;
 
-	scanf ("%s", name_new_data);
+	scanf ("%[^'\n']", name_new_data);
+	getchar ();
 	node -> data = name_new_data;
 
 	return NOT_ERROR;

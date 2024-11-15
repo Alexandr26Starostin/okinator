@@ -5,6 +5,8 @@
 #include "const_in_okinator.h"
 #include "delete_tree.h"
 
+
+
 okinator_error_t delete_tree (node_t* ptr_node)
 {
 	assert (ptr_node);
