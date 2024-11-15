@@ -11,6 +11,7 @@ TARGET = okinator
 PATCHED_FILES = $(addprefix build/, $(FILES))
 
 all: prepare $(TARGET)
+	cd ./stack && make
 
 prepare:
 	mkdir -p build
@@ -40,3 +41,4 @@ definition_and_comparison.o: src/definition_and_comparison.cpp
 clean:
 	rm -rf $(TARGET)
 	cd build && rm -rf *.o
+	cd ./stack && make clean

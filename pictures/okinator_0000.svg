@@ -5,22 +5,22 @@
  -->
 <!-- Pages: 1 -->
 <svg width="284pt" height="46pt"
- viewBox="0.00 0.00 284.25 46.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ viewBox="0.00 0.00 283.50 46.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 42)">
-<polygon fill="white" stroke="none" points="-4,4 -4,-42 280.25,-42 280.25,4 -4,4"/>
-<!-- node_0x62b6348b94a0 -->
+<polygon fill="white" stroke="none" points="-4,4 -4,-42 279.5,-42 279.5,4 -4,4"/>
+<!-- node_0x6021010e34a0 -->
 <g id="node1" class="node">
-<title>node_0x62b6348b94a0</title>
-<polygon fill="yellow" stroke="black" points="0,-0.5 0,-37.5 276.25,-37.5 276.25,-0.5 0,-0.5"/>
-<text text-anchor="middle" x="138.12" y="-24.95" font-family="Times,serif" font-size="9.00">Животное</text>
-<polyline fill="none" stroke="black" points="0,-19 276.25,-19"/>
+<title>node_0x6021010e34a0</title>
+<polygon fill="yellow" stroke="black" points="0,-0.5 0,-37.5 275.5,-37.5 275.5,-0.5 0,-0.5"/>
+<text text-anchor="middle" x="137.75" y="-24.95" font-family="Times,serif" font-size="9.00">Животное</text>
+<polyline fill="none" stroke="black" points="0,-19 275.5,-19"/>
 <text text-anchor="middle" x="26" y="-6.45" font-family="Times,serif" font-size="9.00">left = (nil)</text>
 <polyline fill="none" stroke="black" points="52,-0.5 52,-19"/>
-<text text-anchor="middle" x="104.62" y="-6.45" font-family="Times,serif" font-size="9.00">node = 0x62b6348b94a0</text>
-<polyline fill="none" stroke="black" points="157.25,-0.5 157.25,-19"/>
-<text text-anchor="middle" x="188.5" y="-6.45" font-family="Times,serif" font-size="9.00">parent = (nil)</text>
-<polyline fill="none" stroke="black" points="219.75,-0.5 219.75,-19"/>
-<text text-anchor="middle" x="248" y="-6.45" font-family="Times,serif" font-size="9.00">right = (nil)</text>
+<text text-anchor="middle" x="104.25" y="-6.45" font-family="Times,serif" font-size="9.00">node = 0x6021010e34a0</text>
+<polyline fill="none" stroke="black" points="156.5,-0.5 156.5,-19"/>
+<text text-anchor="middle" x="187.75" y="-6.45" font-family="Times,serif" font-size="9.00">parent = (nil)</text>
+<polyline fill="none" stroke="black" points="219,-0.5 219,-19"/>
+<text text-anchor="middle" x="247.25" y="-6.45" font-family="Times,serif" font-size="9.00">right = (nil)</text>
 </g>
 </g>
 </svg>
