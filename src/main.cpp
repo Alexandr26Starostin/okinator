@@ -6,9 +6,19 @@
 #include "dump_tree.h"
 #include "search_in_tree.h"
 #include "definition_and_comparison.h"
+#include "read_database.h"
+
+//Проверка файлов на открытие
 
 int main ()
 {
+	okinator_error_t status = NOT_ERROR;
+
+	if ((status = read_database ()) != NOT_ERROR) 
+	{
+		return status;
+	}
+
 	char str_for_system[] = "dot okinator.dot -Tsvg -o pictures/okinator_0000.svg";
 	size_t index          = 0;
 
@@ -56,26 +66,29 @@ int main ()
 
 	dump_tree (node_1, str_for_system, &index, file_html);
 
-	search_in_tree (node_1);
+	//search_in_tree (node_1);
 
 	dump_tree (node_1, str_for_system, &index, file_html);
 
-	if (create_definition_node (node_1, name_data_5))
+	if ((status = create_definition_node (node_1, name_data_5)) != NOT_ERROR)
 	{
 		delete_tree (node_1);
 		fclose (file_html);
+		return status;
 	}
 
-	if (create_definition_node (node_1, name_data_4))
+	if ((status = create_definition_node (node_1, name_data_4)) != NOT_ERROR)
 	{
 		delete_tree (node_1);
 		fclose (file_html);
+		return status;
 	}
 
-	if (compare_two_nodes (node_1, name_data_5, name_data_4))
+	if ((status = compare_two_nodes (node_1, name_data_5, name_data_4)) != NOT_ERROR)
 	{
 		delete_tree (node_1);
 		fclose (file_html);
+		return status;
 	}
 
 	fprintf (file_html, "</pre>\n");
@@ -83,5 +96,5 @@ int main ()
 	delete_tree (node_1);
 	fclose (file_html);
 
-	return NOT_ERROR;
+	return status;
 }

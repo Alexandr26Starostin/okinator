@@ -11,17 +11,20 @@ struct node_t
 
 enum okinator_error_t 
 {
-	NOT_ERROR             = 0,
-	NOT_MEMORY_FOR_NODE   = 1,
-    NOT_CREAT_NODE        = 2,
-	NOT_FIND_OKINATOR_DOT = 3,
-	NOT_MEMORY_TARGET     = 4
+	NOT_ERROR                 = 0,
+	NOT_MEMORY_FOR_NODE       = 1,
+    NOT_CREAT_NODE            = 2,
+	NOT_FIND_OKINATOR_DOT     = 3,
+	NOT_MEMORY_TARGET         = 4,
+	NOT_MEMORY_STR_DATA_BASE  = 5,
+	ERROR_IN_SYNTAX_DATA_BASE = 6
 };
 
 const size_t INDEX_NUMBER_OF_PICTURE = 44;
 const size_t SIZE_NAME_NEW_DATA      = 50;
 const size_t SIZE_NAME_NEW_SIGN      = 50;
-const size_t SIZE_WAY_TO_TARGET_NODE  = 36;
+const size_t SIZE_WAY_TO_TARGET_NODE = 36;
+const size_t MAX_LEN_STR_FROM_SSCANF = 50;
 
 struct way_t
 {
