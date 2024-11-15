@@ -62,7 +62,17 @@ int main ()
 
 	fprintf (file_html, "</pre>\n");
 
-	create_definition_node (node_1, name_data_5);
+	if (create_definition_node (node_1, name_data_5))
+	{
+		delete_tree (node_1);
+		fclose (file_html);
+	}
+
+	if (create_definition_node (node_1, name_data_6))
+	{
+		delete_tree (node_1);
+		fclose (file_html);
+	}
 	
 	delete_tree (node_1);
 	fclose (file_html);
