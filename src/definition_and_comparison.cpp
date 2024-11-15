@@ -175,43 +175,43 @@ static okinator_error_t print_comparison (way_t* ptr_way_1, way_t* ptr_way_2)
 
 	while ((ptr_way_1 -> way_to_target_node)[(ptr_way_1 -> index_on_way) - 1] == (ptr_way_2 -> way_to_target_node)[(ptr_way_2 -> index_on_way) - 1])
 	{
-		if ((way_to_target_node_1[*ptr_index_on_way_1]) -> right == way_to_target_node_1[(*ptr_index_on_way_1) - 1])
+		if (((ptr_way_1 -> way_to_target_node)[ptr_way_1 -> index_on_way]) -> right == (ptr_way_1 -> way_to_target_node)[(ptr_way_1 -> index_on_way) - 1])
 		{
 			printf ("не ");
 		}
 
-		printf ("%s, ", (way_to_target_node_1[*ptr_index_on_way_1]) -> data);
+		printf ("%s, ", ((ptr_way_1 -> way_to_target_node)[ptr_way_1 -> index_on_way]) -> data);
 
-		*ptr_index_on_way_1 -= 1;
-		*ptr_index_on_way_2 -= 1;
+		ptr_way_1 -> index_on_way -= 1;
+		ptr_way_2 -> index_on_way -= 1;
 	}
 
-	printf ("но %s - ", target_str_1);
+	printf ("но %s - ", ptr_way_1 -> target_str);
 
-	while (*ptr_index_on_way_1 > 0)
+	while (ptr_way_1 -> index_on_way > 0)
 	{
-		if ((way_to_target_node_1[*ptr_index_on_way_1]) -> right == way_to_target_node_1[(*ptr_index_on_way_1) - 1])
+		if (((ptr_way_1 -> way_to_target_node)[ptr_way_1 -> index_on_way]) -> right == (ptr_way_1 -> way_to_target_node)[(ptr_way_1 -> index_on_way) - 1])
 		{
 			printf ("не ");
 		}
 		
-		printf ("%s, ", (way_to_target_node_1[*ptr_index_on_way_1]) -> data);
+		printf ("%s, ", ((ptr_way_1 -> way_to_target_node)[ptr_way_1 -> index_on_way]) -> data);
 
-		*ptr_index_on_way_1 -= 1;
+		ptr_way_1 -> index_on_way -= 1;
 	}
 
-	printf ("а %s - ", target_str_2);
+	printf ("а %s - ", ptr_way_2 -> target_str);
 
-	while (*ptr_index_on_way_2 > 0)
+	while (ptr_way_2 -> index_on_way > 0)
 	{
-		if ((way_to_target_node_2[*ptr_index_on_way_2]) -> right == way_to_target_node_2[(*ptr_index_on_way_2) - 1])
+		if (((ptr_way_2 -> way_to_target_node)[ptr_way_2 -> index_on_way]) -> right == (ptr_way_2 ->  way_to_target_node)[(ptr_way_2 -> index_on_way) - 1])
 		{
 			printf ("не ");
 		}
 
-		printf ("%s, ", (way_to_target_node_2[*ptr_index_on_way_2]) -> data);
+		printf ("%s, ", ((ptr_way_2 -> way_to_target_node)[ptr_way_2 -> index_on_way]) -> data);
 
-		*ptr_index_on_way_2 -= 1;
+		ptr_way_2 -> index_on_way -= 1;
 	}
 
 	printf ("\n");

@@ -68,7 +68,13 @@ int main ()
 		fclose (file_html);
 	}
 
-	if (create_definition_node (node_1, name_data_6))
+	if (create_definition_node (node_1, name_data_4))
+	{
+		delete_tree (node_1);
+		fclose (file_html);
+	}
+
+	if (compare_two_nodes (node_1, name_data_5, name_data_4))
 	{
 		delete_tree (node_1);
 		fclose (file_html);
