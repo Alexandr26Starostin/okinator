@@ -42,7 +42,7 @@ okinator_error_t play_in_okinator (node_t* first_node)
 
 	if (number_command == 1)
 	{
-		search_in_tree (first_node);
+		search_in_tree (first_node, first_node);
 
 		printf ("\nПоиграем ещё?\n\n");
 

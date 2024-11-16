@@ -21,14 +21,16 @@ enum okinator_error_t
 	NOT_FIND_TARGET           = 7
 };
 
-const size_t INDEX_NUMBER_OF_PICTURE = 44;
-const size_t SIZE_NAME_NEW_DATA      = 50;
-const size_t SIZE_NAME_NEW_SIGN      = 50;
-const size_t SIZE_NAME_DEFINITION    = 50;
-const size_t SIZE_WAY_TO_TARGET_NODE = 36;
-const size_t MAX_LEN_STR_FROM_SSCANF = 50;
-const long   MIN_NUMBER_COMMAND      = 1;
-const long   MAX_NUMBER_COMMAND      = 4;
+const size_t INDEX_NUMBER_OF_PICTURE   = 44;
+const size_t SIZE_NAME_NEW_DATA        = 50;
+const size_t SIZE_NAME_NEW_SIGN        = 50;
+const size_t SIZE_NAME_DEFINITION      = 50;
+const size_t SIZE_WAY_TO_TARGET_NODE   = 36;
+const size_t MAX_LEN_STR_FROM_SSCANF   = 50;
+const long   MIN_NUMBER_COMMAND        = 1;
+const long   MAX_NUMBER_COMMAND        = 4;
+const long   MIN_NUMBER_COMMAND_IN_ADD = 5;
+const long   MAX_NUMBER_COMMAND_IN_ADD = 6;
 
 struct way_t
 {

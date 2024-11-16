@@ -23,7 +23,7 @@ okinator_error_t launch_okinator ()
 
 	long len_data_base = len_file (data_base);
 
-	char* str_data_base = (char*) calloc (len_data_base + 1, sizeof (char));  //+1 for '\0'
+	char* str_data_base = (char*) calloc (len_data_base *5, sizeof (char));  //+1 for '\0'
 	if (str_data_base == NULL) {printf ("%s:%d Not memory for str_data_base\n", __FILE__, __LINE__); fclose (data_base); return NOT_MEMORY_STR_DATA_BASE;}
 
 	read_database (str_data_base, data_base);
@@ -102,7 +102,7 @@ static okinator_error_t read_database (char* str_data_base, FILE* data_base)
 		{
 			symbol = (char) fgetc (data_base);
 
-			if (symbol == '\n' || symbol == '}')
+			if (symbol == '\n' || symbol == '}' || symbol == '{')
 			{
 				str_data_base[index_str++] = '\0';
 			}
@@ -123,10 +123,10 @@ static okinator_error_t read_database (char* str_data_base, FILE* data_base)
 	str_data_base[index_str] = '\n';
 	fclose (data_base);
 
-	// for (int i = 0; i < index_str; i++)
-	// {
-	// 	printf ("%c", str_data_base[i]);
-	// }
+	for (int i = 0; i < index_str; i++)
+	{
+	printf ("%c", str_data_base[i]);
+	}
 
 	//printf ("\n\n%s\n\n", str_data_base);
 
