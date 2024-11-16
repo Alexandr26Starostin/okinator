@@ -53,6 +53,12 @@ okinator_error_t create_definition_node (node_t* node, char* target_str)
 
 	find_position_node (node, target_str, &target_node);
 
+	if (target_node == NULL)
+	{
+		printf ("Прости, я не знаю слово \"%s\". Ты можешь рассказать мне о нём, нажав 1. Я буду рад узнать новое)\n", target_str);
+		return NOT_FIND_TARGET;
+	}
+
 	printf ("%s - ", target_str);
 
 	print_definition_node (target_node);
@@ -97,6 +103,12 @@ static okinator_error_t create_way (node_t* node, way_t* ptr_way)
 
 	find_position_node (node, ptr_way -> target_str, &(ptr_way -> target_node));
 
+	if (ptr_way -> target_node == NULL)
+	{
+		printf ("Прости, я не знаю слово \"%s\". Ты можешь рассказать мне о нём, нажав 1. Я буду рад узнать новое)\n", ptr_way -> target_str);
+		return NOT_FIND_TARGET;
+	}
+
 	okinator_error_t status = write_in_way (ptr_way);
 	if (status != NOT_ERROR) {return status;}
 
@@ -136,7 +148,6 @@ static okinator_error_t write_in_way (way_t* ptr_way)
 	return status;
 }
 
-
 okinator_error_t compare_two_nodes (node_t* node, char* target_str_1, char* target_str_2)
 {
 	assert (node);
@@ -151,8 +162,11 @@ okinator_error_t compare_two_nodes (node_t* node, char* target_str_1, char* targ
 	way_1.target_str = target_str_1;
 	way_2.target_str = target_str_2;
 
-	create_way (node, &way_1);
-	create_way (node, &way_2);
+	status = create_way (node, &way_1);
+	if (status) {return status;}
+
+	status = create_way (node, &way_2);
+	if (status) {return status;}
 
 	print_comparison (&way_1, &way_2);
 
